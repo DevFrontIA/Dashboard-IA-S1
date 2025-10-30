@@ -1,0 +1,110 @@
+/* ======================================= */
+/* ESTILOS APRIMORADOS - CHAT.CSS */
+/* ======================================= */
+
+/* Contêiner Principal (Chat-Container) */
+.chat-container {
+  /* Tamanho e Layout */
+  width: 100%; 
+  max-width: 500px; 
+  height: 90vh; /* Um pouco menor para dar espaço na tela */
+  
+  /* Visual Aprimorado */
+  background-color: #1F1F1F; /* Fundo do chat mais escuro */
+  border: 1px solid #333333; /* Borda sutil */
+  border-radius: 16px; /* Bordas mais suaves */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Sombra mais profunda e elegante */
+  
+  /* Estrutura Flex */
+  display: flex;
+  flex-direction: column; 
+  overflow: hidden; 
+}
+
+/* Área de Visualização de Mensagens */
+.messages-display {
+  flex-grow: 1; 
+  padding: 20px 15px; /* Mais padding */
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column; 
+  /* Estilização da barra de rolagem (opcional, dependente do navegador) */
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1F1F1F; 
+}
+
+/* --- ESTILOS DAS BOLHAS (MESSAGE-BUBBLE) --- */
+
+/* Base para todas as bolhas */
+.message-bubble {
+  max-width: 85%; 
+  padding: 12px 18px; 
+  border-radius: 20px; 
+  margin-bottom: 12px;
+  line-height: 1.5;
+  transition: all 0.3s ease; /* Transição suave para o caso de animação futura */
+  font-size: 15px;
+}
+
+/* Mensagem da IA (Cinza-Azulado Elegante) */
+.message-bubble.ai {
+  background-color: #2D2D2D; /* Cinza escuro elegante */
+  color: #E2E2E2;
+  align-self: flex-start; 
+  border-bottom-left-radius: 6px; 
+}
+
+/* Mensagem do Usuário (Verde Água/Ciano - Destaque Moderno) */
+.message-bubble.user {
+  background-color: #00BFA5; /* Verde-Água/Ciano - Cor moderna de destaque */
+  color: #0A0A0A; /* Texto preto para alto contraste no destaque */
+  align-self: flex-end; 
+  border-bottom-right-radius: 6px; 
+}
+
+
+/* --- ESTILOS DA ÁREA DE INPUT --- */
+
+.chat-input-area {
+  display: flex;
+  padding: 12px 15px;
+  border-top: 1px solid #333; 
+  background-color: #1F1F1F;
+}
+
+.chat-input-area input {
+  flex-grow: 1; 
+  padding: 12px;
+  border: 1px solid #444; /* Borda sutil */
+  border-radius: 25px; /* Bordas totalmente arredondadas */
+  background-color: #2D2D2D;
+  color: #ffffff;
+  margin-right: 10px;
+  outline: none; 
+  transition: border-color 0.2s;
+}
+
+.chat-input-area input:focus {
+  border-color: #00BFA5; /* Borda de foco com a cor de destaque */
+}
+
+.chat-input-area button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #00BFA5; 
+  color: #0A0A0A;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-input-area button:hover:not(:disabled) {
+  background-color: #008f77;
+}
+
+.chat-input-area button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
