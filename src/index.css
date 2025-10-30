@@ -1,0 +1,24 @@
+/* CONFIGURAÇÃO DE ESTILO GLOBAL (Upgrade Estético) */
+* {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Profissional: Fundo Preto Profundo */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  background-color: #0A0A0A; /* Preto ultra-escuro (Deep Black) */
+  color: #E2E2E2; /* Cor do texto cinza claro */
+  min-height: 100vh; 
+}
+
+/* Estrutura Centralizada */
+#root, .App-Dashboard {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; /* Centraliza verticalmente o chat */
+}
